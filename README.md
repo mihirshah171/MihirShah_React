@@ -1,3 +1,5 @@
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -37,11 +39,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Day-1 : React Project Set Up & Fundamentals
 
-Install create-react-app by running this command in your terminal:
+- Install create-react-app by running this command in your terminal:
 
-**npm install -g create-react-app**
-
-**npx create-react-app app_name**
+### `npm install -g create-react-app`
+### `npx create-react-app app_name`
 
 ## Day-2 : Components and Props
 
@@ -50,3 +51,23 @@ Install create-react-app by running this command in your terminal:
 - Into Component folder Child folder made for Users.js file
 - Users.js imported in App.js
 - App.js imported in Index.js file
+
+## Day-3 : React Lifecycle, Class Component, Functional Component, Stateful Component, Stateless component
+
+- Created Component folder in src folder
+- Into Component folder created
+ **LifeCycle.js** 
+ **StateFullComponent.js** 
+ **StatelessComponent.js** 
+ **FunctionalComponent.js**
+ - All components called into **App.js**
+ - All LifeCycles Checked using All States.
+ - Only during mount setState() is working.
+ - Mount is first calling constructor thenafter should update and update constructor is calling.
+-**FunctionalComponent.js** is made without using class or constructor.
+- In **StateFullComponent.js** function created without constructor.
+- Into onClick butoon auto increment added
+- Into onChange Input Value  **StateFullComponent.js** **StatelessComponent.js** and **FunctionalComponent.js** is calling.
+- Props Validation Complete (When we add static sting into App.js name state that can shows validation error into console log of browser)
+ -Use below command to install prop-types validator
+ ### `npm i prop-types`
