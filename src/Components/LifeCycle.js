@@ -8,9 +8,7 @@ class LifeCycle extends Component {
       }
   }
     componentDidMount() {
-       debugger
       this.timer = setTimeout(() => {
-         debugger
          console.log('constrctor have number 1');
          // this.setState({tudent: {name : 'mihir'}}) //can not be used
        }, 1000)
