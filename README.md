@@ -69,5 +69,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Into onClick butoon auto increment added
 - Into onChange Input Value  **StateFullComponent.js** **StatelessComponent.js** and **FunctionalComponent.js** is calling.
 - Props Validation Complete (When we add static sting into App.js name state that can shows validation error into console log of browser)
- -Use below command to install prop-types validator
- ### `npm i prop-types`
+
+## Day 3 (Second Task) : React Life-cycle, Conditional Rendering & Events
+
+- Into **Users.js** file 
+    -Created one pure-component function.
+    -Used click events with passing parameter.
+    -Called events from child component.
+
+- Into **App.js** file
+    -Implemented mounting, updating and unmounting lifecycle methods --> Ignored getSnapshotBeforeUpdate() as per instructions.
+    -Practiced on conditional rendering.
+    -Created pure-component.
+
+- Into **ErrorBoundary.js** file
+    -Implemented Error handling LifeCycle.
