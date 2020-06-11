@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './App.css';
 import Users from '../Components/Users';
 
 //3. Pure-Component 
-export const AuthContext = React.createContext(false);
-
-class App extends Component {
+class App extends PureComponent {
   constructor(props) {
     super(props);
     console.log('[App.js] constructor');
@@ -70,13 +68,13 @@ class App extends Component {
     this.setState({ users: users });
   };
 
-  deletePersonHandler = userIndex => {
+  deleteUserHandler = userIndex => {
     const users = [...this.state.users];
     users.splice(userIndex, 1);
     this.setState({ users: users });
   };
 
-  togglePersonsHandler = () => {
+  toggleUsersHandler = () => {
     const doesShow = this.state.showUsers;
     this.setState({ showUsers: !doesShow });
   };
@@ -99,7 +97,7 @@ class App extends Component {
         <React.Fragment>
           {this.state.users.map((user, index) => {
             return <Users
-              click={() => this.deletePersonHandler(index)}
+              click={() => this.deleteUserHandler(index)}
               name={user.name}
               age={user.age}
               key={user.id}
@@ -114,10 +112,8 @@ class App extends Component {
         <p>click Toggle Users to show users detail!</p>
         <button
           style={style}
-          onClick={this.togglePersonsHandler}>Toggle Users</button>
-        <AuthContext.Provider value={this.state.authenticated}>
-          {users}
-        </AuthContext.Provider>
+          onClick={this.toggleUsersHandler}>Toggle Users</button>
+        {users}
       </div>
     );
   }
