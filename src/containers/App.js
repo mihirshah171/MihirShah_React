@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.css'
 import Auxillary from '../hoc/Auxillary';
+import Test from '../components/Test'
 class App extends Component {
   render() {
     return (
       <Auxillary>
-        <div className='App'>
-          <h1>Hello Now Using React</h1>
-        </div>
+        <Test/>
       </Auxillary>
     );
   }

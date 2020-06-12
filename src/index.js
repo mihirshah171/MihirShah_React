@@ -4,6 +4,7 @@ import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
+import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <React.StrictMode>
     <ErrorBoundary>
