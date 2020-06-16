@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/MihirShah_React/static/css/main.f1b42223.chunk.css",
+    "main.js": "/MihirShah_React/static/js/main.9d5c8bde.chunk.js",
+    "main.js.map": "/MihirShah_React/static/js/main.9d5c8bde.chunk.js.map",
+    "runtime-main.js": "/MihirShah_React/static/js/runtime-main.9bb60cc5.js",
+    "runtime-main.js.map": "/MihirShah_React/static/js/runtime-main.9bb60cc5.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/MihirShah_React/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.3b2f842a.chunk.js": "/MihirShah_React/static/js/2.3b2f842a.chunk.js",
+    "static/js/2.3b2f842a.chunk.js.map": "/MihirShah_React/static/js/2.3b2f842a.chunk.js.map",
+    "index.html": "/MihirShah_React/index.html",
+    "precache-manifest.a30ee9517ad75d777296982dcea9677e.js": "/MihirShah_React/precache-manifest.a30ee9517ad75d777296982dcea9677e.js",
+    "service-worker.js": "/MihirShah_React/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/MihirShah_React/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.f1b42223.chunk.css.map": "/MihirShah_React/static/css/main.f1b42223.chunk.css.map",
+    "static/js/2.3b2f842a.chunk.js.LICENSE.txt": "/MihirShah_React/static/js/2.3b2f842a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9bb60cc5.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.3b2f842a.chunk.js",
+    "static/css/main.f1b42223.chunk.css",
+    "static/js/main.9d5c8bde.chunk.js"
+  ]
+}
