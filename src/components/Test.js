@@ -4,7 +4,7 @@ import Auxillary from '../hoc/Auxillary';
 const Test = () => {
     return (
         <Auxillary>
-            <h1 className='text-center mt-3'>React Is On</h1>
+            <h1 className='text-center mt-3'>React Is On!</h1>
         </Auxillary>
     );
 };
