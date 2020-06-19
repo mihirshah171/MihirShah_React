@@ -84,3 +84,54 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 - Into **ErrorBoundary.js** file
     -Implemented Error handling LifeCycle.
+
+## Day-6: List & Keys
+
+
+**Into Users.js file**
+* Users details DOM  created.
+
+
+**Into UsersNameLable.js file**
+* Users name label and see more button Created.
+
+
+***Into App.js file***
+* toggleUsersHandler created.
+* Using toggleUsersHandler on click  of button it show perticular users details.
+* Users state is created.
+
+
+
+## Day-7: Integrate Styling with Bootstrap
+* Used CSS using module and imported classes for styling.
+* Used Bootstrap for styling.
+
+## Day-8: Use React Hook "useState()"
+
+
+**Created a simple counter where there is 3 types of button**
+***Reset : To set value back to initial***
+***Increase : Increase the value***
+***Decrease : Decrease the value***
+
+**When user hit negative value error message is generated.**
+
+**Bootstrap and CSS styling added.**
+
+**Now anyone can check output of last task using below link**
+***(https://mihirshah171.github.io/MihirShah_React/)***
+
+## Day-9: Hooks in Depth
+
+* Added React-Icon package using
+
+**npm install react-icons --save**
+
+* Displayed the current inner width of the window on the page.
+
+* When the user resizes the window, it should reflect the value on the page.
+
+* Based on width, displayed icon of desktop, mobile, or tablet device on the page.
+
+* Toggle visibility of **DisplayCurrentWidth.js** arbitrary component based on the type of the device.
