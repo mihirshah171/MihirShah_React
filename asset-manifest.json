@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/MihirShah_React/static/css/main.91ffe70d.chunk.css",
-    "main.js": "/MihirShah_React/static/js/main.3089c085.chunk.js",
-    "main.js.map": "/MihirShah_React/static/js/main.3089c085.chunk.js.map",
+    "main.css": "/MihirShah_React/static/css/main.3828b836.chunk.css",
+    "main.js": "/MihirShah_React/static/js/main.f76168a2.chunk.js",
+    "main.js.map": "/MihirShah_React/static/js/main.f76168a2.chunk.js.map",
     "runtime-main.js": "/MihirShah_React/static/js/runtime-main.d699eab3.js",
     "runtime-main.js.map": "/MihirShah_React/static/js/runtime-main.d699eab3.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/MihirShah_React/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.a7d1bebb.chunk.js": "/MihirShah_React/static/js/2.a7d1bebb.chunk.js",
-    "static/js/2.a7d1bebb.chunk.js.map": "/MihirShah_React/static/js/2.a7d1bebb.chunk.js.map",
+    "static/css/2.aa628720.chunk.css": "/MihirShah_React/static/css/2.aa628720.chunk.css",
+    "static/js/2.e8062bce.chunk.js": "/MihirShah_React/static/js/2.e8062bce.chunk.js",
+    "static/js/2.e8062bce.chunk.js.map": "/MihirShah_React/static/js/2.e8062bce.chunk.js.map",
     "index.html": "/MihirShah_React/index.html",
-    "precache-manifest.6bdd909e31b108e3529765c34dacc914.js": "/MihirShah_React/precache-manifest.6bdd909e31b108e3529765c34dacc914.js",
+    "precache-manifest.4dfa106548fe6e9fc2249ca1e8f4c01d.js": "/MihirShah_React/precache-manifest.4dfa106548fe6e9fc2249ca1e8f4c01d.js",
     "service-worker.js": "/MihirShah_React/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/MihirShah_React/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.91ffe70d.chunk.css.map": "/MihirShah_React/static/css/main.91ffe70d.chunk.css.map",
-    "static/js/2.a7d1bebb.chunk.js.LICENSE.txt": "/MihirShah_React/static/js/2.a7d1bebb.chunk.js.LICENSE.txt",
-    "static/media/Content.module.css": "/MihirShah_React/static/media/brown-paper-clips-1097930.3518d52f.jpg"
+    "static/css/2.aa628720.chunk.css.map": "/MihirShah_React/static/css/2.aa628720.chunk.css.map",
+    "static/css/main.3828b836.chunk.css.map": "/MihirShah_React/static/css/main.3828b836.chunk.css.map",
+    "static/js/2.e8062bce.chunk.js.LICENSE.txt": "/MihirShah_React/static/js/2.e8062bce.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d699eab3.js",
-    "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.a7d1bebb.chunk.js",
-    "static/css/main.91ffe70d.chunk.css",
-    "static/js/main.3089c085.chunk.js"
+    "static/css/2.aa628720.chunk.css",
+    "static/js/2.e8062bce.chunk.js",
+    "static/css/main.3828b836.chunk.css",
+    "static/js/main.f76168a2.chunk.js"
   ]
 }
