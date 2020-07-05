@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/MihirShah_React/static/css/main.661daeb9.chunk.css",
-    "main.js": "/MihirShah_React/static/js/main.825a9c49.chunk.js",
-    "main.js.map": "/MihirShah_React/static/js/main.825a9c49.chunk.js.map",
+    "main.css": "/MihirShah_React/static/css/main.526ea145.chunk.css",
+    "main.js": "/MihirShah_React/static/js/main.70c48dbd.chunk.js",
+    "main.js.map": "/MihirShah_React/static/js/main.70c48dbd.chunk.js.map",
     "runtime-main.js": "/MihirShah_React/static/js/runtime-main.d699eab3.js",
     "runtime-main.js.map": "/MihirShah_React/static/js/runtime-main.d699eab3.js.map",
     "static/css/2.af3c1da9.chunk.css": "/MihirShah_React/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.d7129c63.chunk.js": "/MihirShah_React/static/js/2.d7129c63.chunk.js",
-    "static/js/2.d7129c63.chunk.js.map": "/MihirShah_React/static/js/2.d7129c63.chunk.js.map",
+    "static/js/2.4cfb291c.chunk.js": "/MihirShah_React/static/js/2.4cfb291c.chunk.js",
+    "static/js/2.4cfb291c.chunk.js.map": "/MihirShah_React/static/js/2.4cfb291c.chunk.js.map",
     "index.html": "/MihirShah_React/index.html",
-    "precache-manifest.1b5e01d29bb676a9b2d737e98e093177.js": "/MihirShah_React/precache-manifest.1b5e01d29bb676a9b2d737e98e093177.js",
+    "precache-manifest.8b5faf31823de23e3a612eee3b8da5a9.js": "/MihirShah_React/precache-manifest.8b5faf31823de23e3a612eee3b8da5a9.js",
     "service-worker.js": "/MihirShah_React/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/MihirShah_React/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.661daeb9.chunk.css.map": "/MihirShah_React/static/css/main.661daeb9.chunk.css.map",
-    "static/js/2.d7129c63.chunk.js.LICENSE.txt": "/MihirShah_React/static/js/2.d7129c63.chunk.js.LICENSE.txt"
+    "static/css/main.526ea145.chunk.css.map": "/MihirShah_React/static/css/main.526ea145.chunk.css.map",
+    "static/js/2.4cfb291c.chunk.js.LICENSE.txt": "/MihirShah_React/static/js/2.4cfb291c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/MihirShah_React/static/media/photo-of-buildings-during-nighttime-2603464.5d780de5.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d699eab3.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.d7129c63.chunk.js",
-    "static/css/main.661daeb9.chunk.css",
-    "static/js/main.825a9c49.chunk.js"
+    "static/js/2.4cfb291c.chunk.js",
+    "static/css/main.526ea145.chunk.css",
+    "static/js/main.70c48dbd.chunk.js"
   ]
 }
