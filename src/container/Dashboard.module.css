@@ -1,0 +1,22 @@
+.AddIcon {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.LinkModal button {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: black;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 0.2em;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.LinkModal button:hover {
+    color: #fff;
+}

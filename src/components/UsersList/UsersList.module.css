@@ -1,0 +1,31 @@
+.Icon {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.DeleteIcon {
+    font-size: 5rem;
+    text-align: center;
+    color: #FFCC00;
+    margin-bottom: 10px;
+}
+
+.Card {
+    width: 18rem;
+    color: white;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.9);
+    color: #f1f1f1;
+    padding: 20px;
+    box-shadow: 0 8px 16px 0 rgba(197, 126, 126, 0.9);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.Card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Container {
+    padding: 2px 16px;
+}
