@@ -10,9 +10,19 @@
     margin-bottom: 10px;
 }
 
+.Accordion {
+    display: flex !important;
+    justify-content: center;
+}
+
+.Toggle {
+    color: #ffffff;
+    background-color: #000000;
+}
+
 .Card {
     width: 18rem;
-    color: white;
+    margin-bottom: 30px;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.9);
     color: #f1f1f1;

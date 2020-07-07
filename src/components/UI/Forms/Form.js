@@ -30,12 +30,21 @@ const RegistrationForm = (props) => {
                 }}
                 validationSchema={
                     Yup.object().shape({
-                        FirstName: Yup.string().required("First Name is required!"),
-                        LastName: Yup.string().required('Last name is required'),
+                        FirstName: Yup.string()
+                            .max(15, 'Must be 15 characters or less')
+                            .matches(/^[A-Za-z]+/, 'Use Alphabates only')
+                            .required("First Name is required!"),
+                        LastName: Yup.string()
+                            .max(20, 'Must be 20 characters or less')
+                            .matches(/^[A-Za-z]+/, 'Use Alphabates only')
+                            .required('Last name is required'),
                         Email: Yup.string().email("Email is invalid").required("Email is required"),
-                        City: Yup.string().required("City is required"),
-                        State: Yup.string().required("State is required"),
-                        Country: Yup.string().required("Country is required"),
+                        City: Yup.string().required("City is required")
+                            .max(20, 'Must be 20 characters or less'),
+                        State: Yup.string().required("State is required")
+                            .max(20, 'Must be 20 characters or less'),
+                        Country: Yup.string().required("Country is required")
+                            .max(20, 'Must be 20 characters or less'),
                         Department: Yup.string()
                             .oneOf(
                                 ['designer', 'development', 'product', 'other'],

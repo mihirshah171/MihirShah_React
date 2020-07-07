@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import classes from './Dashboard.module.css'
 import axios from '../Utils/axios-users';
 import Row from 'react-bootstrap/Row';
-import { AiOutlineUserAdd } from 'react-icons/ai';
+import { AiOutlineUserAdd, AiFillDownCircle, AiFillUpCircle } from 'react-icons/ai';
 import Modals from '../components/UI/Modals/Modals';
 import Form from '../components/UI/Forms/Form';
 import UsersList from '../components/UsersList/UsersList';
@@ -17,6 +17,8 @@ class Dashboard extends Component {
         show: false,
         loading: false,
         error: false,
+        itemsToShow: 3,
+        expanded: false
     }
 
     componentDidMount() {
@@ -89,6 +91,15 @@ class Dashboard extends Component {
             .finally(() => this.setState({ loading: false }))
     }
 
+    showMore() {
+        debugger
+        this.state.itemsToShow === 3 ? (
+            this.setState({ itemsToShow: this.state.users.length, expanded: true })
+        ) : (
+                this.setState({ itemsToShow: 3, expanded: false })
+            )
+    }
+
     render() {
         return (
             <Fragment>
@@ -118,9 +129,9 @@ class Dashboard extends Component {
                         />
                     </Modals>
                 </div>
-                <Row className="justify-content-center w-100">
+                <Row className="justify-content-md-center w-100">
                     {
-                        this.state.users.map((user) =>
+                        this.state.users.slice(0, this.state.itemsToShow).map((user) =>
                             <ListWithLoading
                                 isLoading={this.state.loading}
                                 key={user._id}
@@ -130,6 +141,21 @@ class Dashboard extends Component {
                             />)
                     }
                 </Row>
+                {
+                    this.state.users.length > 3 ?
+                        <div className={[classes.ShowMoreLess, 'ml-5'].join(' ')}>
+                            <button onClick={this.showMore.bind(this)}>
+                                {
+                                    this.state.expanded ?
+                                        <span>Show less <AiFillUpCircle /></span>
+                                        :
+                                        <span>Show more <AiFillDownCircle /></span>
+                                }
+                            </button>
+                        </div>
+                        :
+                        null
+                }
             </Fragment>
         );
     }

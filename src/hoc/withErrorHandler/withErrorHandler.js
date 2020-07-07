@@ -4,16 +4,17 @@ import Modals from '../../components/UI/Modals/Modals';
 const withErrorHandler = (WrappedComponent, axios) => {
     return class extends Component {
         state = {
-            error: null
+            error: false,
+            errormsg: []
         }
 
         componentDidMount() {
             this.reqInterceptor = axios.interceptors.request.use(req => {
-                this.setState({ error: null });
+                this.setState({ error: false });
                 return req;
             });
             this.resInterceptor = axios.interceptors.response.use(res => res, error => {
-                this.setState({ error: error });
+                this.setState({ error: true, errormsg: error });
             });
         }
 
@@ -23,7 +24,7 @@ const withErrorHandler = (WrappedComponent, axios) => {
         }
 
         errorConfirmedHandler = () => {
-            this.setState({ error: null });
+            this.setState({ error: false });
         }
 
         render() {
@@ -34,7 +35,12 @@ const withErrorHandler = (WrappedComponent, axios) => {
                         onHide={this.errorConfirmedHandler}
                         header='Error'
                     >
-                        {this.state.error ? this.state.error.message : null}
+                        {
+                            this.state.errormsg.response ?
+                                this.state.errormsg.response.data.message
+                                :
+                                this.state.errormsg.message
+                        }
                     </Modals>
                     <WrappedComponent {...this.props} />
                 </Fragment>

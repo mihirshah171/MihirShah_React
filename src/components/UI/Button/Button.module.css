@@ -27,3 +27,19 @@
 .Danger {
     color: #944317;
 }
+
+.CustomButton {
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 8px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+}

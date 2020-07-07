@@ -17,6 +17,11 @@
     text-transform: uppercase;
 }
 
-.LinkModal button:hover {
+.ShowMoreLess button {
     color: #fff;
+    background: #000;
+    border-radius: 1.5em;
+    left: 30%;
+    padding: 1em;
+    text-decoration: none;
 }
