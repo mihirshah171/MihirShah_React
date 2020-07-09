@@ -4,24 +4,10 @@
     cursor: pointer;
 }
 
-.LinkModal button {
-    border: 1px solid #fff;
-    color: #fff;
-    background-color: black;
-    font-family: Verdana;
-    font-size: 20px;
-    font-weight: bolder;
-    letter-spacing: 0.2em;
-    padding: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
+.ShowMoreLess {
+ text-align: center;
 }
 
-.ShowMoreLess button {
-    color: #fff;
-    background: #000;
-    border-radius: 1.5em;
-    left: 30%;
-    padding: 1em;
-    text-decoration: none;
+.Container {
+    padding: 3rem 0 12rem;
 }

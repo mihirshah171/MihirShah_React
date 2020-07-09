@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.module.css';
 import Dashboard from './container/Dashboard';
+import Header from './components/UI/Header/Header';
+import Footer from './components/UI/Footer/Footer';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={classes.Container}>
+        <Header />
         <Dashboard />
-      </div>
+        <Footer />
+      </div >
     );
   }
 }

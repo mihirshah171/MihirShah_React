@@ -1,0 +1,12 @@
+.Header {
+    background-color: #00008b !important;
+}
+
+.Header button {
+    color: white !important;
+    border-color: white !important;
+}
+
+.Header a {
+    color: #ffffff !important;
+}

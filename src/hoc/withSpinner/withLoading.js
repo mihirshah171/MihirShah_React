@@ -11,7 +11,7 @@ const WithLoading = (WrappedComponent) => {
             <div className={classes.Loader}>
                 <Loader
                     type="Circles"
-                    color="white"
+                    color="black"
                     height={100}
                     width={100}
                 />

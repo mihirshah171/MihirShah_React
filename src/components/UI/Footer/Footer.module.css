@@ -1,0 +1,20 @@
+.Footer {
+    position: fixed;
+    height: 12%;
+    width: 100%;
+    padding-top: 2px;
+    bottom: 0;
+    clear: both;
+    float: left;
+    overflow: auto;
+    background-color: #00008b;
+    color: #ffffff;
+}
+
+.Footer a {
+    color: #ffffff !important;
+}
+
+.Footer a:hover {
+    color: yellowgreen !important;
+}
