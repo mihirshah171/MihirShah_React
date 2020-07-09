@@ -6,7 +6,7 @@ const Footer = () => (
     <footer className={classes.Footer}>
       <div className="text-center text-muted">
         <small >
-          Copyright &copy; ={new Date().getFullYear()}. All Rights Reserved
+          Copyright &copy; {new Date().getFullYear()}. All Rights Reserved
         </small>
       </div>
     </footer>
