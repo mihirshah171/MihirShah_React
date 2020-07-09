@@ -29,6 +29,9 @@
         "multiline-ternary": "off",
         "no-magic-numbers": "off",
         "complexity": "off",
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "linebreak-style": "off",
+        "indent": "off",
+        "space-before-function-paren": "off"
     }
 }
