@@ -1,13 +1,12 @@
 .Footer {
     position: fixed;
-    height: 12%;
     width: 100%;
-    padding-top: 2px;
+    padding: 20px;
     bottom: 0;
     clear: both;
     float: left;
     overflow: auto;
-    background-color: #00008b;
+    background-color: #000000;
     color: #ffffff;
 }
 

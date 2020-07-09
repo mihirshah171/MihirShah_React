@@ -1,0 +1,34 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard",
+        "eslint:all"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "semi": "off",
+        "react/prop-types": "off",
+        "max-lines-per-function": "off",
+        "no-underscore-dangle": "off",
+        "require-unicode-regexp": "off",
+        "no-ternary": "off",
+        "max-len": "off",
+        "multiline-ternary": "off",
+        "no-magic-numbers": "off",
+        "complexity": "off",
+        "class-methods-use-this": "off"
+    }
+}

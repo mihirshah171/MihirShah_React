@@ -5,9 +5,15 @@
 }
 
 .ShowMoreLess {
- text-align: center;
+    text-align: center;
 }
 
 .Container {
-    padding: 3rem 0 12rem;
+    padding: 3rem 0 6rem;
+}
+
+@media screen and (max-width: 600px) {
+    .Container {
+        padding: 3rem 0 12rem;
+    }
 }
