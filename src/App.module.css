@@ -1,0 +1,11 @@
+body {
+    background-color: #e4decd;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.Container {
+    min-height: 100%;
+    position: relative;
+}
