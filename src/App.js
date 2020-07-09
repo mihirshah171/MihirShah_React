@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
-import classes from './App.module.css';
-import Dashboard from './container/Dashboard';
-import Header from './components/UI/Header/Header';
-import Footer from './components/UI/Footer/Footer';
+import React, { Component, Fragment } from 'react'
+import Dashboard from './container/Dashboard'
+import Footer from './components/UI/Footer/Footer'
+import Header from './components/UI/Header/Header'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className={classes.Container}>
+      <Fragment>
         <Header />
         <Dashboard />
         <Footer />
-      </div >
-    );
+      </Fragment>
+    )
   }
 }
 
-export default App;
+export default App

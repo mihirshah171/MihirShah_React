@@ -1,18 +1,16 @@
 .Button {
-    background-color: transparent;
+    display: inline-block;
+    background-color: #f4511e;
     border: none;
-    color: black;
-    outline: none;
-    cursor: pointer;
-    font: inherit;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
     padding: 10px;
-    margin: 10px;
-    font-weight: bold;
-}
-
-.Button:first-of-type {
-    margin-left: 0;
-    padding-left: 0;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bolder;
 }
 
 .Button:disabled {
@@ -21,40 +19,42 @@
 }
 
 .Success {
-    color: #5C9210;
+    background-color: #5C9210;
 }
 
 .Danger {
-    color: #944317;
+    background-color: #944317;
 }
 
-.CustomButton {
-    vertical-align: middle;
+.AddUser {
+    background-color: #010203;
+}
+
+.AddUser span {
+    cursor: pointer;
     display: inline-block;
-    border-radius: 4px;
-    background-color: #f4511e;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 20px;
-    padding: 8px;
-    width: auto;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 10px;
+    position: relative;
+    transition: 0.5s;
 }
 
-.ContentBtn {
-    text-align: center;
-    background-color: #00008b;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px;
-    font-weight: bold;
+.AddUser span:after {
+    content: '\002B';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
 }
 
-.AddNewUserBtn:hover {
-    background-color: blueviolet;
+.AddUser:hover span {
+    padding-right: 25px;
+}
+
+.AddUser:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.List {
+    background-color: #010203;
 }

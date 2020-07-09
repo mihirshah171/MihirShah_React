@@ -1,23 +1,16 @@
-import React from 'react';
-import classes from './Footer.module.css';
-import Nav from 'react-bootstrap/Nav';
+import React from 'react'
+import classes from './Footer.module.css'
 
-const Footer = () => {
-    return (
-        <div>
-            <footer className={classes.Footer}>
-                <Nav className='justify-content-center'>
-                    <Nav.Link>About-Us</Nav.Link>
-                    <Nav.Link>Contact-Us</Nav.Link>
-                    <Nav.Link>Customer-Service</Nav.Link>
-                </Nav>
-                <div className="text-center text-muted">
-                    <small >Copyright &copy; {new Date().getFullYear()}. All Rights Reserved</small>
-                </div>
-            </footer>
-
-        </div>
-    );
-};
+const Footer = () => (
+  <div>
+    <footer className={classes.Footer}>
+      <div className="text-center text-muted">
+        <small >
+          Copyright &copy; ={new Date().getFullYear()}. All Rights Reserved
+        </small>
+      </div>
+    </footer>
+  </div>
+);
 
 export default Footer;

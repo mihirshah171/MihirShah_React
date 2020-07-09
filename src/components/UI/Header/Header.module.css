@@ -1,5 +1,5 @@
 .Header {
-    background-color: #00008b !important;
+    background-color: #000000 !important;
 }
 
 .Header button {
@@ -9,4 +9,8 @@
 
 .Header a {
     color: #ffffff !important;
+}
+
+.DropDown {
+    color: black !important;
 }
