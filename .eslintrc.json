@@ -1,7 +1,14 @@
 {
     "env": {
         "browser": true,
-        "es2020": true
+        "es2020": true,
+        "es6": true
+    },
+    "parser": "babel-eslint",
+    "settings": {
+        "react": {
+            "version": "16.8.2"
+        }
     },
     "extends": [
         "plugin:react/recommended",
