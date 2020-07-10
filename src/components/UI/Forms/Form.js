@@ -205,7 +205,7 @@ const RegistrationForm = (props) => {
                                       <div>
                                         {
                                           updating
-                                            ? <strong>User added successfully…</strong>
+                                            ? <strong>Adding New User…</strong>
                                             : <Button
                                               type="submit"
                                               disabled={updating}
@@ -235,7 +235,7 @@ const RegistrationForm = (props) => {
                                       {
                                         updating
                                           ? <strong>
-                                                    User information updated successfully…
+                                                    User information updating…
                                           </strong>
                                           : <Button
                                             type="submit"

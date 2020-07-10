@@ -2,12 +2,9 @@ import React, { Component, Fragment } from 'react';
 import Modals from '../../components/UI/Modals/Modals';
 
 const withErrorHandler = (WrappedComponent, axios) => class ErrorHandling extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: false,
-            errormsg: []
-        }
+    state = {
+        error: false,
+        errormsg: []
     }
 
     componentDidMount() {
