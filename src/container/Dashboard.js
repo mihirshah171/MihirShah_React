@@ -1,12 +1,12 @@
-import { AiFillDownCircle, AiFillCheckCircle, AiFillUpCircle } from 'react-icons/ai';
+import { AiFillDownCircle, AiFillUpCircle } from 'react-icons/ai';
 import React, { Component, Fragment } from 'react';
 import ApiHelperWithAxios from '../Utils/ApiHelperWithAxios';
 import Button from '../components/UI/Button/Button';
 import Container from 'react-bootstrap/Container';
 import Form from '../components/UI/Forms/Form';
 import Modals from '../components/UI/Modals/Modals';
+import Notification from '../components/UI/Notification/Notification';
 import Row from 'react-bootstrap/Row';
-import Toast from 'react-bootstrap/Toast';
 import UsersList from '../components/UsersList/UsersList';
 import classes from './Dashboard.module.css'
 import withLoading from '../hoc/withSpinner/withLoading';
@@ -26,12 +26,12 @@ class Dashboard extends Component {
         users: []
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.setState({ loading: true });
         this.handleGetData()
     }
 
-    handleGetData() {
+    handleGetData = () => {
         setTimeout(
             () => {
                 ApiHelperWithAxios.MakeRequest('users', 'GET',
@@ -51,7 +51,7 @@ class Dashboard extends Component {
         );
     }
 
-    handleSubmitForm(data) {
+    handleSubmitForm = (data) => {
         this.setState({ loading: true, show: false })
         ApiHelperWithAxios.MakeRequestWithBody("users", "POST", data,
             (response) => {
@@ -67,7 +67,7 @@ class Dashboard extends Component {
             });
     }
 
-    handleUpdate(id, data) {
+    handleUpdate = (id, data) => {
         this.setState({ show: false })
         this.setState({ loading: true });
         ApiHelperWithAxios.MakeRequestWithBody("users/" + id, "PATCH", data,
@@ -90,7 +90,7 @@ class Dashboard extends Component {
             });
     };
 
-    handleDelete(id) {
+    handleDelete = (id) => {
         this.setState({ loading: true });
         ApiHelperWithAxios.MakeRequest("users/" + id, "DELETE",
             (response) => {
@@ -106,7 +106,7 @@ class Dashboard extends Component {
             });
     }
 
-    showMore() {
+    showMore = () => {
         if (this.state.itemsToShow === 3) {
             this.setState({ expanded: true, itemsToShow: this.state.users.length })
         } else {
@@ -114,15 +114,15 @@ class Dashboard extends Component {
         }
     }
 
-    errorConfirmedHandler() {
+    errorConfirmedHandler = () => {
         this.setState({ error: false });
     }
 
-    handleAlertClose() {
+    handleAlertClose = () => {
         this.setState({ alertShow: false })
     }
 
-    render() {
+    render = () => {
         return (
             <Fragment>
                 <Container className={classes.Container}>
@@ -131,36 +131,13 @@ class Dashboard extends Component {
                     </div>
                     {
                         this.state.alertShow &&
-                        <div
-                            aria-live="polite"
-                            aria-atomic="true"
-                            style={{
-                                position: 'relative',
-                                minHeight: '60px',
-                                marginTop: '20px'
-                            }}
-                        >
-                            <div
-                                style={{
-                                    position: 'absolute',
-                                    top: 0,
-                                    right: 0,
-                                }}
-                            >
-                                <Toast onClose={this.handleAlertClose.bind(this)} show={this.state.alertShow} delay={3000} autohide>
-                                    <Toast.Header>
-                                        <img
-                                            src="holder.js/20x20?text=%20"
-                                            className="rounded mr-2"
-                                            alt=""
-                                        />
-                                        <strong className="mr-auto">Success</strong>
-                                        <small className='ml-3'>Just Now</small>
-                                    </Toast.Header>
-                                    <Toast.Body><lable><AiFillCheckCircle style={{ color: 'blue' }} />&nbsp;{this.state.alertMessage}</lable></Toast.Body>
-                                </Toast>
-                            </div>
-                        </div>
+                        <Notification
+                            show={this.state.alertShow}
+                            close={this.handleAlertClose.bind(this)}
+                            alert={this.state.alertMessage}
+                            delay={3000}
+                            autohide
+                        />
                     }
                     {
                         this.state.error ?
@@ -194,6 +171,8 @@ class Dashboard extends Component {
                             header="Form"
                             headertype="FormHeader"
                             bodytype="FormCenter"
+                            scrollable
+                            size='lg'
                         >
                             <FormWithLoading
                                 isLoading={this.state.loading}

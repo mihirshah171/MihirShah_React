@@ -7,8 +7,6 @@ const Modals = (props) => (
     <Modal
       {...props}
       centered
-      scrollable
-      size="lg"
       show={props.show}
       onHide={props.onHide}
     >
