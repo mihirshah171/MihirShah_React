@@ -15,10 +15,10 @@ const FormWithLoading = withLoading(Form);
 
 class Dashboard extends Component {
     state = {
-        alertShow: false,
         alertMessage: null,
-        errormsg: null,
+        alertShow: false,
         error: false,
+        errormsg: null,
         expanded: false,
         itemsToShow: 3,
         loading: false,
@@ -34,18 +34,20 @@ class Dashboard extends Component {
     handleGetData = () => {
         setTimeout(
             () => {
-                ApiHelperWithAxios.MakeRequest('users', 'GET',
+                ApiHelperWithAxios.MakeRequest(
+                    'users',
+                    'GET',
                     (response) => {
                         const users = [...response.data.data];
                         this.setState({ users })
-
                     },
                     (error) => {
-                        this.setState({ errormsg: error, error: true });
+                        this.setState({ error: true, errormsg: error });
                     },
                     () => {
                         this.setState({ loading: false });
-                    });
+                    }
+                );
             },
             3000
         );
@@ -53,24 +55,34 @@ class Dashboard extends Component {
 
     handleSubmitForm = (data) => {
         this.setState({ loading: true, show: false })
-        ApiHelperWithAxios.MakeRequestWithBody("users", "POST", data,
+        ApiHelperWithAxios.MakeRequestWithBody(
+            'users',
+            'POST',
+            data,
             (response) => {
                 const newUser = { ...response.data.data };
-                const User = [...this.state.users, newUser];
-                this.setState({ users: User, alertShow: true, alertMessage: response.data.message })
+                const User = [
+                    ...this.state.users,
+                    newUser
+                ];
+                this.setState({ alertMessage: response.data.message, alertShow: true, users: User })
             },
             (error) => {
-                this.setState({ errormsg: error, error: true });
+                this.setState({ error: true, errormsg: error });
             },
             () => {
                 this.setState({ loading: false });
-            });
+            }
+        );
     }
 
     handleUpdate = (id, data) => {
         this.setState({ show: false })
         this.setState({ loading: true });
-        ApiHelperWithAxios.MakeRequestWithBody("users/" + id, "PATCH", data,
+        ApiHelperWithAxios.MakeRequestWithBody(
+            `users/${id}`,
+            'PATCH',
+            data,
             (response) => {
                 const current = [...this.state.users];
                 const objIndex = this.state.users.findIndex((obj) => obj._id === id);
@@ -80,30 +92,34 @@ class Dashboard extends Component {
                     current,
                     { [objIndex]: updatedObj }
                 );
-                this.setState({ users: newUsers, alertShow: true, alertMessage: response.data.message })
+                this.setState({ alertMessage: response.data.message, alertShow: true, users: newUsers })
             },
             (error) => {
-                this.setState({ errormsg: error, error: true });
+                this.setState({ error: true, errormsg: error });
             },
             () => {
                 this.setState({ loading: false })
-            });
+            }
+        );
     };
 
     handleDelete = (id) => {
         this.setState({ loading: true });
-        ApiHelperWithAxios.MakeRequest("users/" + id, "DELETE",
+        ApiHelperWithAxios.MakeRequest(
+            `users/${id}`,
+            'DELETE',
             (response) => {
                 const prevusers = [...this.state.users];
                 const currentusers = prevusers.filter((deleteUser) => deleteUser._id !== id)
-                this.setState({ users: currentusers, alertShow: true, alertMessage: response.data.message })
+                this.setState({ alertMessage: response.data.message, alertShow: true, users: currentusers })
             },
             (error) => {
-                this.setState({ errormsg: error, error: true });
+                this.setState({ error: true, errormsg: error });
             },
             () => {
                 this.setState({ loading: false })
-            });
+            }
+        );
     }
 
     showMore = () => {
@@ -122,98 +138,95 @@ class Dashboard extends Component {
         this.setState({ alertShow: false })
     }
 
-    render = () => {
-        return (
-            <Fragment>
-                <Container className={classes.Container}>
-                    <div>
-                        {this.state.loading && <ListWithLoading isLoading={this.state.loading} />}
-                    </div>
-                    {
-                        this.state.alertShow &&
-                        <Notification
-                            show={this.state.alertShow}
-                            close={this.handleAlertClose.bind(this)}
-                            alert={this.state.alertMessage}
-                            delay={3000}
-                            autohide
-                        />
-                    }
-                    {
-                        this.state.error ?
-                            <Modals
-                                show={this.state.error}
-                                onHide={this.errorConfirmedHandler.bind(this)}
-                                header="Error"
-                            >
-                                {
-                                    this.state.errormsg.response
-                                        ? this.state.errormsg.response.data.message
-                                        : this.state.errormsg.message
-                                }
-                            </Modals>
-                            :
-                            null
-                    }
-                    <div className="my-5">
-                        {
-                            this.state.loading === false
-                                ? <div className={classes.LinkModal} id="linkmodal">
-                                    <Button btnType="AddUser" class="button" clicked={() => this.setState({ show: true })}>
-                                        <span>Add New User </span>
-                                    </Button>
-                                </div>
-                                : null
-                        }
-                        <Modals
-                            show={this.state.show}
-                            onHide={() => this.setState({ show: false })}
-                            header="Form"
-                            headertype="FormHeader"
-                            bodytype="FormCenter"
-                            scrollable
-                            size='lg'
+    render = () => (
+        <Fragment>
+            <Container className={classes.Container}>
+                <div>
+                    {this.state.loading && <ListWithLoading isLoading={this.state.loading} />}
+                </div>
+                {
+                    this.state.alertShow &&
+                    <Notification
+                        show={this.state.alertShow}
+                        close={this.handleAlertClose.bind(this)}
+                        alert={this.state.alertMessage}
+                        delay={3000}
+                        autohide
+                    />
+                }
+                {
+                    this.state.error
+                        ? <Modals
+                            show={this.state.error}
+                            onHide={this.errorConfirmedHandler.bind(this)}
+                            header="Error"
                         >
-                            <FormWithLoading
-                                isLoading={this.state.loading}
-                                title="Add"
-                                data={this.state.users}
-                                insert={this.handleSubmitForm.bind(this)}
-                                update={this.handleUpdate.bind(this)}
-                            />
+                            {
+                                this.state.errormsg.response
+                                    ? this.state.errormsg.response.data.message
+                                    : this.state.errormsg.message
+                            }
                         </Modals>
-                    </div>
-                    <Row className="justify-content-md-center">
-                        {
-                            this.state.users.slice(
-                                0,
-                                this.state.itemsToShow
-                            ).map((user) => <ListWithLoading
-                                isLoading={this.state.loading}
-                                key={user._id}
-                                data={user}
-                                delete={this.handleDelete.bind(this)}
-                                update={this.handleUpdate.bind(this)}
-                            />)
-                        }
-                    </Row>
+                        : null
+                }
+                <div className="my-5">
                     {
-                        this.state.loading === false && this.state.users.length > 3
-                            ? <div className={classes.ShowMoreLess}>
-                                <Button btnType="List" clicked={this.showMore.bind(this)}>
-                                    {
-                                        this.state.expanded
-                                            ? <span>Show less <AiFillUpCircle /></span>
-                                            : <span>Show more <AiFillDownCircle /></span>
-                                    }
+                        this.state.loading === false
+                            ? <div className={classes.LinkModal} id="linkmodal">
+                                <Button btnType="AddUser" class="button" clicked={() => this.setState({ show: true })}>
+                                    <span>Add New User </span>
                                 </Button>
                             </div>
                             : null
                     }
-                </Container>
-            </Fragment>
-        );
-    }
+                    <Modals
+                        show={this.state.show}
+                        onHide={() => this.setState({ show: false })}
+                        header="Form"
+                        headertype="FormHeader"
+                        bodytype="FormCenter"
+                        scrollable
+                        size="lg"
+                    >
+                        <FormWithLoading
+                            isLoading={this.state.loading}
+                            title="Add"
+                            data={this.state.users}
+                            insert={this.handleSubmitForm.bind(this)}
+                            update={this.handleUpdate.bind(this)}
+                        />
+                    </Modals>
+                </div>
+                <Row className="justify-content-md-center">
+                    {
+                        this.state.users.slice(
+                            0,
+                            this.state.itemsToShow
+                        ).map((user) => <ListWithLoading
+                            isLoading={this.state.loading}
+                            key={user._id}
+                            data={user}
+                            delete={this.handleDelete.bind(this)}
+                            update={this.handleUpdate.bind(this)}
+                        />)
+                    }
+                </Row>
+                {
+                    this.state.loading === false && this.state.users.length > 3
+                        ? <div className={classes.ShowMoreLess}>
+                            <Button btnType="List" clicked={this.showMore.bind(this)}>
+                                {
+                                    this.state.expanded
+                                        ? <span>Show less <AiFillUpCircle /></span>
+                                        : <span>Show more <AiFillDownCircle /></span>
+                                }
+                            </Button>
+                        </div>
+                        : null
+                }
+            </Container>
+        </Fragment>
+    )
 }
 
 export default Dashboard;
