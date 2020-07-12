@@ -12,7 +12,6 @@ import classes from './UsersList.module.css';
 
 const DisplayUserInformations = (props) => {
   const { data } = props;
-
   const [
     show,
     setShow
@@ -24,14 +23,14 @@ const DisplayUserInformations = (props) => {
   const handleClose = () => setdelShow(false);
   const handleShow = () => setdelShow(true);
   const Alert =
-        <>
-          <Button btnType="Danger" clicked={handleClose}>
-                Cancel
+    <>
+      <Button btnType="Danger" clicked={handleClose}>
+        Cancel
           </Button>
-          <Button btnType="CustomButton" clicked={() => props.delete(data._id)}>
-                Yes delete it!
+      <Button btnType="CustomButton" clicked={() => props.delete(data._id)}>
+        Yes delete it!
           </Button>
-        </>
+    </>
 
   return (
     <Col xs={12} md={6} lg={4} className="text-center m-0 p-0">
@@ -40,20 +39,20 @@ const DisplayUserInformations = (props) => {
           <Card.Header>
             <h5>{`${data.FirstName} ${data.LastName}`}</h5>
             <Accordion.Toggle variant="link" eventKey="1" className={classes.Toggle}>
-                            Show More Details!
+              Show More Details!
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="1">
             <Card.Body className={classes.Container}>
               <Card.Text>
-                                Firstname : {data.FirstName} <br />
-                                    Lastname : {data.LastName}<br />
-                                    Email : {data.Email}<br />
-                                    City : {data.City}<br />
-                                    State : {data.State}<br />
-                                    Country : {data.Country}<br />
-                                    Department : {data.Department}<br />
-                                    Gender : {data.Gender}<br />
+                Firstname : {data.FirstName} <br />
+                Lastname : {data.LastName}<br />
+                Email : {data.Email}<br />
+                City : {data.City}<br />
+                State : {data.State}<br />
+                Country : {data.Country}<br />
+                Department : {data.Department}<br />
+                Gender : {data.Gender}<br />
               </Card.Text>
             </Card.Body>
           </Accordion.Collapse>
@@ -67,6 +66,8 @@ const DisplayUserInformations = (props) => {
             header="Update"
             headertype="FormHeader"
             bodytype="FormCenter"
+            scrollable
+            size='lg'
           >
             <Form data={data} title="Update" update={props.update} />
           </Modals>
@@ -77,6 +78,7 @@ const DisplayUserInformations = (props) => {
             keyboard={false}
             header="Are You Sure You Want to Delete ?"
             footer={Alert}
+            className={classes.DeleteModal}
           >
             <div className="text-center">
               <AiOutlineWarning className={classes.DeleteIcon} /> <br />

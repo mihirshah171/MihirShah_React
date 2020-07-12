@@ -1,0 +1,16 @@
+.Notification {
+    position: relative;
+    min-height: auto;
+    margin-top: 20px;
+}
+
+.Toast {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.Icon {
+    color: #4169E1;
+    margin-right: 5px;
+}
