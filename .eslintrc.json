@@ -39,6 +39,10 @@
         "class-methods-use-this": "off",
         "linebreak-style": "off",
         "indent": "off",
-        "space-before-function-paren": "off"
+        "space-before-function-paren": "off",
+        "no-invalid-this": "off",
+        "implicit-arrow-linebreak": "off",
+        "comma-dangle": "off",
+        "no-trailing-spaces": "off"
     }
 }
