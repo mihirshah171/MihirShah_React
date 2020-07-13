@@ -3,8 +3,7 @@ import { AiFillCheckCircle } from 'react-icons/ai';
 import Toast from 'react-bootstrap/Toast';
 import classes from './Notification.module.css';
 
-const Notification = (props) => {
-    return (
+const Notification = (props) => (
         <Fragment>
             <div aria-live="polite" aria-atomic="true" className={classes.Notification}>
                 <div className={classes.Toast}>
@@ -12,7 +11,7 @@ const Notification = (props) => {
                         <Toast.Header>
                             <AiFillCheckCircle className={classes.Icon} />
                             <strong className="mr-auto">Success</strong>
-                            <small className='ml-3'>Just Now</small>
+                            <small className="ml-3">Just Now</small>
                         </Toast.Header>
                         <Toast.Body><lable>{props.alert}</lable></Toast.Body>
                     </Toast>
@@ -20,6 +19,5 @@ const Notification = (props) => {
             </div>
         </Fragment>
     );
-};
 
 export default Notification;

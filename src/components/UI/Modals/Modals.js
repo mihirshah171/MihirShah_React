@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Modals.module.css';
 
 const Modals = (props) => (
-  <div>
+  <div className="w-100">
     <Modal
       {...props}
       centered
