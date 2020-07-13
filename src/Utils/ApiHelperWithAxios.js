@@ -1,12 +1,12 @@
 import axios from 'axios';
-let baseURL = 'https://axios-crud-server.herokuapp.com/';
+const baseURL = 'https://axios-crud-server.herokuapp.com/';
 
 const AxiosAPIHelper = {
     MakeRequest: (endpoint, method, SuccessBlock, CatchBlock, FinallyBlock) => {
-        let url = baseURL + endpoint;
+        const url = baseURL + endpoint;
         return axios({
-            method: method,
-            url: url,
+            method,
+            url,
         })
             .then((response) => {
                 if (SuccessBlock) {
@@ -28,11 +28,11 @@ const AxiosAPIHelper = {
             });
     },
     MakeRequestWithBody: (endpoint, method, body, SuccessBlock, CatchBlock, FinallyBlock) => {
-        let url = baseURL + endpoint;
+        const url = baseURL + endpoint;
         return axios({
-            method: method,
-            url: url,
-            data: body
+            data: body,
+            method,
+            url
         })
             .then((response) => {
                 if (SuccessBlock) {

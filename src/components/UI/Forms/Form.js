@@ -104,9 +104,11 @@ const RegistrationForm = (props) => {
               setSubmitting(false);
               if (props.title === 'Add') {
                 submitValues(values);
+                setupdating(false);
               }
               if (props.title === 'Update') {
                 updatedValues(values);
+                setupdating(false);
               }
             },
             3000
@@ -117,14 +119,14 @@ const RegistrationForm = (props) => {
           <Form>
             <div className="form-group">
               <Row>
-                <Col>
+                <Col lg={6} md={6} sm={12} xs={12}>
                   <div className="form-group col">
                     <label htmlFor="FirstName">First Name</label>
                     <Field type="text" name="FirstName" placeholder="First Name" className={[`form-control ${errors.FirstName && touched.FirstName ? 'is-invalid' : ''}`].join(' ')}></Field>
                     <ErrorMessage name="FirstName" component="div" className="invalid-feedback" />
                   </div>
                 </Col>
-                <Col>
+                <Col lg={6} md={6} sm={12} xs={12}>
                   <div className="form-group col">
                     <label htmlFor="LastName">Last Name</label>
                     <Field type="text" name="LastName" placeholder="Last Name" className={[`form-control ${errors.LastName && touched.LastName ? 'is-invalid' : ''}`].join(' ')}></Field>
@@ -132,27 +134,31 @@ const RegistrationForm = (props) => {
                   </div>
                 </Col>
               </Row>
-              <div className="form-group col">
-                <label htmlFor="Email">Email</label>
-                <Field type="text" name="Email" placeholder="Email Address" className={[`form-control ${errors.Email && touched.Email ? 'is-invalid' : ''}`].join(' ')}></Field>
-                <ErrorMessage name="Email" component="div" className="invalid-feedback" />
-              </div>
               <Row>
-                <Col>
+              <Col lg={12} md={12} sm={12} xs={12}>
+                <div className="form-group col">
+                  <label htmlFor="Email">Email</label>
+                  <Field type="text" name="Email" placeholder="Email Address" className={[`form-control ${errors.Email && touched.Email ? 'is-invalid' : ''}`].join(' ')}></Field>
+                  <ErrorMessage name="Email" component="div" className="invalid-feedback" />
+                </div>
+              </Col>
+              </Row>
+              <Row>
+                <Col lg={4} md={4} sm={12} xs={12}>
                   <div className="form-group col">
                     <label htmlFor="City">City</label>
                     <Field type="text" name="City" placeholder="City" className={[`form-control ${errors.City && touched.City ? 'is-invalid' : ''}`].join(' ')}></Field>
                     <ErrorMessage name="City" component="div" className="invalid-feedback" />
                   </div>
                 </Col>
-                <Col>
+                <Col lg={4} md={4} sm={12} xs={12}>
                   <div className="form-group col">
                     <label htmlFor="State">State</label>
                     <Field type="text" name="State" placeholder="State" className={[`form-control ${errors.State && touched.State ? 'is-invalid' : ''}`].join(' ')}></Field>
                     <ErrorMessage name="State" component="div" className="invalid-feedback" />
                   </div>
                 </Col>
-                <Col>
+                <Col lg={4} md={4} sm={12} xs={12}>
                   <div className="form-group col">
                     <label htmlFor="Country">Country</label>
                     <Field type="text" name="Country" placeholder="Country" className={[`form-control ${errors.Country && touched.Country ? 'is-invalid' : ''}`].join(' ')}></Field>
@@ -161,7 +167,7 @@ const RegistrationForm = (props) => {
                 </Col>
               </Row>
               <Row>
-                <Col>
+                <Col lg={6} md={6} sm={12} xs={12}>
                   <div className="form-group col">
                     <label htmlFor="Department">Department</label>
                     <Field name="Department" as="select" className={[`form-control ${errors.Department && touched.Department ? 'is-invalid' : ''}`].join(' ')}>
@@ -174,28 +180,20 @@ const RegistrationForm = (props) => {
                     <ErrorMessage name="Department" component="div" className="invalid-feedback" />
                   </div>
                 </Col>
-                <Col>
+                <Col lg={6} md={6} sm={12} xs={12}>
                   <div className="form-group col">
-                    <label htmlFor="Gender">Gender</label>
-                    <div className="form-control text-center">
+                    <label htmlFor="Gender">Gender</label><br/>
                       <Field name="Gender" type="radio" value="male" className={[
                         (errors.Gender && touched.Gender ? 'is-invalid' : ''),
                         ''
                       ].join(' ')}></Field>
-                      <strong className="ml-1">Male</strong>
-                      <Field name="Gender" type="radio" value="female" className={[
-                        (errors.Gender && touched.Gender ? 'is-invalid' : ''),
-                        'ml-3'
-                      ].join(' ')}></Field>
-                      <strong className="ml-1">Female</strong>
-                      <Field name="Gender" type="radio" value="other" className={[
-                        (errors.Gender && touched.Gender ? 'is-invalid' : ''),
-                        'ml-3'
-                      ].join(' ')}></Field>
+                      <strong className="ml-1">Male</strong><br/>
+                      <Field name="Gender" type="radio" value="female" className={(errors.Gender && touched.Gender ? 'is-invalid' : '')}></Field>
+                      <strong className="ml-1">Female</strong><br/>
+                      <Field name="Gender" type="radio" value="other" className={[(errors.Gender && touched.Gender ? 'is-invalid' : '')].join(' ')}></Field>
                       <strong className="ml-1">Other</strong>
                     </div>
                     <ErrorMessage name="Gender" component="div" className="invalid-feedback" />
-                  </div>
                 </Col>
               </Row>
               <div className="form-group text-center mt-3">
@@ -211,7 +209,7 @@ const RegistrationForm = (props) => {
                                               disabled={updating}
                                               btnType="Success"
                                             >
-                                                        SUBMIT
+                                              SUBMIT
                                             </Button>
                                         }
                                       </div>

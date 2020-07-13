@@ -1,17 +1,19 @@
-let baseURL = 'https://axios-crud-server.herokuapp.com/';
+const baseURL = 'https://axios-crud-server.herokuapp.com/';
 
 const APIHelper = {
     MakeRequest: (endpoint, method, SuccessBlock, CatchBlock, FinallyBlock) => {
-        let url = baseURL + endpoint;
-        return fetch(url,
+        const url = baseURL + endpoint;
+        return fetch(
+            url,
             {
-                method: method,
-                redirect: 'follow',
-                referrer: 'no-referrer',
                 cache: 'no-cache',
-                credentials: 'same-origin'
-            })
-            .then(response => response.json())
+                credentials: 'same-origin',
+                method,
+                redirect: 'follow',
+                referrer: 'no-referrer'
+            }
+            )
+            .then((response) => response.json())
             .then((response) => {
                 if (SuccessBlock) {
                     return SuccessBlock(response);
@@ -32,16 +34,18 @@ const APIHelper = {
             });
     },
     MakeRequestWithBody: (endpoint, method, body, SuccessBlock, CatchBlock, FinallyBlock) => {
-        let url = baseURL + endpoint;
-        return fetch(url,
+        const url = baseURL + endpoint;
+        return fetch(
+            url,
             {
-                method: method,
+                body: JSON.stringify(body),
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(body)
-            })
-            .then(response => response.json())
+                method
+            }
+)
+            .then((response) => response.json())
             .then((response) => {
                 if (SuccessBlock) {
                     return SuccessBlock(response);

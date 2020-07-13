@@ -11,7 +11,6 @@ import UsersList from '../components/UsersList/UsersList';
 import classes from './Dashboard.module.css'
 import withLoading from '../hoc/withSpinner/withLoading';
 const ListWithLoading = withLoading(UsersList);
-const FormWithLoading = withLoading(Form);
 
 class Dashboard extends Component {
     state = {
@@ -54,7 +53,7 @@ class Dashboard extends Component {
     }
 
     handleSubmitForm = (data) => {
-        this.setState({ loading: true, show: false })
+        this.setState({ loading: true });
         ApiHelperWithAxios.MakeRequestWithBody(
             'users',
             'POST',
@@ -65,7 +64,7 @@ class Dashboard extends Component {
                     ...this.state.users,
                     newUser
                 ];
-                this.setState({ alertMessage: response.data.message, alertShow: true, users: User })
+                this.setState({ alertMessage: response.data.message, alertShow: true, show: false, users: User })
             },
             (error) => {
                 this.setState({ error: true, errormsg: error });
@@ -77,7 +76,6 @@ class Dashboard extends Component {
     }
 
     handleUpdate = (id, data) => {
-        this.setState({ show: false })
         this.setState({ loading: true });
         ApiHelperWithAxios.MakeRequestWithBody(
             `users/${id}`,
@@ -92,7 +90,7 @@ class Dashboard extends Component {
                     current,
                     { [objIndex]: updatedObj }
                 );
-                this.setState({ alertMessage: response.data.message, alertShow: true, users: newUsers })
+                this.setState({ alertMessage: response.data.message, alertShow: true, show: false, users: newUsers })
             },
             (error) => {
                 this.setState({ error: true, errormsg: error });
@@ -173,7 +171,7 @@ class Dashboard extends Component {
                     {
                         this.state.loading === false
                             ? <div className={classes.LinkModal} id="linkmodal">
-                                <Button btnType="AddUser" class="button" clicked={() => this.setState({ show: true })}>
+                                <Button btnType="AddUser" clicked={() => this.setState({ show: true })}>
                                     <span>Add New User </span>
                                 </Button>
                             </div>
@@ -188,8 +186,7 @@ class Dashboard extends Component {
                         scrollable
                         size="lg"
                     >
-                        <FormWithLoading
-                            isLoading={this.state.loading}
+                        <Form
                             title="Add"
                             data={this.state.users}
                             insert={this.handleSubmitForm.bind(this)}

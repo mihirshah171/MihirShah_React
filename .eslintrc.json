@@ -43,6 +43,7 @@
         "no-invalid-this": "off",
         "implicit-arrow-linebreak": "off",
         "comma-dangle": "off",
-        "no-trailing-spaces": "off"
+        "no-trailing-spaces": "off",
+        "max-params": "off"
     }
 }

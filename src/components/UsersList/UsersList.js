@@ -67,7 +67,7 @@ const DisplayUserInformations = (props) => {
             headertype="FormHeader"
             bodytype="FormCenter"
             scrollable
-            size='lg'
+            size="lg"
           >
             <Form data={data} title="Update" update={props.update} />
           </Modals>
