@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseURL = 'https://axios-crud-server.herokuapp.com/';
+const baseURL = process.env.REACT_APP_BASEURL;
 
 const AxiosAPIHelper = {
     MakeRequest: (endpoint, method, SuccessBlock, CatchBlock, FinallyBlock) => {

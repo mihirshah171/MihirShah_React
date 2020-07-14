@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import ApiHelperWithAxios from '../Utils/ApiHelperWithAxios';
 import Button from '../components/UI/Button/Button';
 import Container from 'react-bootstrap/Container';
+import { Empty } from 'antd';
 import Form from '../components/UI/Forms/Form';
 import Modals from '../components/UI/Modals/Modals';
 import Notification from '../components/UI/Notification/Notification';
@@ -31,24 +32,19 @@ class Dashboard extends Component {
     }
 
     handleGetData = () => {
-        setTimeout(
-            () => {
-                ApiHelperWithAxios.MakeRequest(
-                    'users',
-                    'GET',
-                    (response) => {
-                        const users = [...response.data.data];
-                        this.setState({ users })
-                    },
-                    (error) => {
-                        this.setState({ error: true, errormsg: error });
-                    },
-                    () => {
-                        this.setState({ loading: false });
-                    }
-                );
+        ApiHelperWithAxios.MakeRequest(
+            'users',
+            'GET',
+            (response) => {
+                const users = [...response.data.data];
+                this.setState({ users })
             },
-            3000
+            (error) => {
+                this.setState({ error: true, errormsg: error });
+            },
+            () => {
+                this.setState({ loading: false });
+            }
         );
     }
 
@@ -194,20 +190,30 @@ class Dashboard extends Component {
                         />
                     </Modals>
                 </div>
-                <Row className="justify-content-md-center">
-                    {
-                        this.state.users.slice(
-                            0,
-                            this.state.itemsToShow
-                        ).map((user) => <ListWithLoading
-                            isLoading={this.state.loading}
-                            key={user._id}
-                            data={user}
-                            delete={this.handleDelete.bind(this)}
-                            update={this.handleUpdate.bind(this)}
-                        />)
-                    }
-                </Row>
+                {
+                    this.state.users.length > 0
+                        ? <Row className="justify-content-md-center">
+                            {
+                                this.state.users.slice(
+                                    0,
+                                    this.state.itemsToShow
+                                ).map((user) => <ListWithLoading
+                                    isLoading={this.state.loading}
+                                    key={user._id}
+                                    data={user}
+                                    delete={this.handleDelete.bind(this)}
+                                    update={this.handleUpdate.bind(this)}
+                                />)
+                            }
+                        </Row>
+                        : <div>
+                            {
+                                this.state.loading === false
+                                    ? <Empty className={classes.Empty} />
+                                    : null
+                            }
+                        </div>
+                }
                 {
                     this.state.loading === false && this.state.users.length > 3
                         ? <div className={classes.ShowMoreLess}>
