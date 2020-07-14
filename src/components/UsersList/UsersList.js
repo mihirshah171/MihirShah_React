@@ -37,7 +37,7 @@ const DisplayUserInformations = (props) => {
       <Accordion defaultActiveKey="0" className={classes.Accordion}>
         <Card className={classes.Card}>
           <Card.Header>
-            <h5>{`${data.FirstName} ${data.LastName}`}</h5>
+            <h5 className='text-white'>{`${data.FirstName} ${data.LastName}`}</h5>
             <Accordion.Toggle variant="link" eventKey="1" className={classes.Toggle}>
               Show More Details!
             </Accordion.Toggle>
