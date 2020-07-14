@@ -1,4 +1,4 @@
-const baseURL = 'https://axios-crud-server.herokuapp.com/';
+const baseURL = process.env.REACT_APP_BASEURL
 
 const APIHelper = {
     MakeRequest: (endpoint, method, SuccessBlock, CatchBlock, FinallyBlock) => {
@@ -12,7 +12,7 @@ const APIHelper = {
                 redirect: 'follow',
                 referrer: 'no-referrer'
             }
-            )
+        )
             .then((response) => response.json())
             .then((response) => {
                 if (SuccessBlock) {
@@ -44,7 +44,7 @@ const APIHelper = {
                 },
                 method
             }
-)
+        )
             .then((response) => response.json())
             .then((response) => {
                 if (SuccessBlock) {
