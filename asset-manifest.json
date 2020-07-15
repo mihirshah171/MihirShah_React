@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/MihirShah_React/static/css/main.526ea145.chunk.css",
-    "main.js": "/MihirShah_React/static/js/main.70c48dbd.chunk.js",
-    "main.js.map": "/MihirShah_React/static/js/main.70c48dbd.chunk.js.map",
+    "main.css": "/MihirShah_React/static/css/main.74c70368.chunk.css",
+    "main.js": "/MihirShah_React/static/js/main.fd1c6c3e.chunk.js",
+    "main.js.map": "/MihirShah_React/static/js/main.fd1c6c3e.chunk.js.map",
     "runtime-main.js": "/MihirShah_React/static/js/runtime-main.d699eab3.js",
     "runtime-main.js.map": "/MihirShah_React/static/js/runtime-main.d699eab3.js.map",
     "static/css/2.af3c1da9.chunk.css": "/MihirShah_React/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.4cfb291c.chunk.js": "/MihirShah_React/static/js/2.4cfb291c.chunk.js",
-    "static/js/2.4cfb291c.chunk.js.map": "/MihirShah_React/static/js/2.4cfb291c.chunk.js.map",
+    "static/js/2.d7129c63.chunk.js": "/MihirShah_React/static/js/2.d7129c63.chunk.js",
+    "static/js/2.d7129c63.chunk.js.map": "/MihirShah_React/static/js/2.d7129c63.chunk.js.map",
     "index.html": "/MihirShah_React/index.html",
-    "precache-manifest.8b5faf31823de23e3a612eee3b8da5a9.js": "/MihirShah_React/precache-manifest.8b5faf31823de23e3a612eee3b8da5a9.js",
+    "precache-manifest.f427481b9bb058c85316c71b92c0c36a.js": "/MihirShah_React/precache-manifest.f427481b9bb058c85316c71b92c0c36a.js",
     "service-worker.js": "/MihirShah_React/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/MihirShah_React/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.526ea145.chunk.css.map": "/MihirShah_React/static/css/main.526ea145.chunk.css.map",
-    "static/js/2.4cfb291c.chunk.js.LICENSE.txt": "/MihirShah_React/static/js/2.4cfb291c.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/MihirShah_React/static/media/photo-of-buildings-during-nighttime-2603464.5d780de5.jpg"
+    "static/css/main.74c70368.chunk.css.map": "/MihirShah_React/static/css/main.74c70368.chunk.css.map",
+    "static/js/2.d7129c63.chunk.js.LICENSE.txt": "/MihirShah_React/static/js/2.d7129c63.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d699eab3.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.4cfb291c.chunk.js",
-    "static/css/main.526ea145.chunk.css",
-    "static/js/main.70c48dbd.chunk.js"
+    "static/js/2.d7129c63.chunk.js",
+    "static/css/main.74c70368.chunk.css",
+    "static/js/main.fd1c6c3e.chunk.js"
   ]
 }
