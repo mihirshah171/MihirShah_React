@@ -24,10 +24,10 @@ const DisplayUserInformations = (props) => {
   const handleShow = () => setdelShow(true);
   const Alert =
     <>
-      <Button btnType="Danger" clicked={handleClose}>
+      <Button btnType="Cancel" clicked={handleClose}>
         Cancel
           </Button>
-      <Button btnType="CustomButton" clicked={() => props.delete(data._id)}>
+      <Button btnType="Delete" clicked={() => props.delete(data._id)}>
         Yes delete it!
           </Button>
     </>

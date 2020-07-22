@@ -2,7 +2,7 @@
     display: inline-block;
     background-color: #f4511e;
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
     font-size: 15px;
     padding: 10px;
@@ -19,11 +19,22 @@
 }
 
 .Success {
-    background-color: #5C9210;
+    background-color: #5c9210;
 }
 
 .Danger {
     background-color: #944317;
+}
+
+.Cancel {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0;
+    width: 100px;
+}
+
+.Delete {
+    background-color: #6d0202;
 }
 
 .AddUser {
@@ -38,7 +49,7 @@
 }
 
 .AddUser span:after {
-    content: '\002B';
+    content: "\002B";
     position: absolute;
     opacity: 0;
     top: 0;
