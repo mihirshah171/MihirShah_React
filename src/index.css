@@ -7,11 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #e4decd;
   padding: 0;
-  background-image: url("./assets/close-up-of-wooden-plank-326311.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: rgb(243, 237, 237);
 }
 
 code {

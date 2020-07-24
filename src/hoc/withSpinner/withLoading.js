@@ -10,7 +10,7 @@ const WithLoading = (WrappedComponent) => function WithLoadingWrappedComponent({
         <div className={classes.Loader}>
             <Loader
                 type="Grid"
-                color="#fff"
+                color="#000000"
                 height={100}
                 width={100}
             />
