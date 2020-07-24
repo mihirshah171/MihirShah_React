@@ -9,8 +9,8 @@ const WithLoading = (WrappedComponent) => function WithLoadingWrappedComponent({
     return (
         <div className={classes.Loader}>
             <Loader
-                type="Circles"
-                color="black"
+                type="Grid"
+                color="#000000"
                 height={100}
                 width={100}
             />
