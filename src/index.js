@@ -1,10 +1,13 @@
-import 'antd/dist/antd.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
+import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
-  <App />,
+  <ErrorBoundary>
+    <App />
+  </ErrorBoundary>,
   document.getElementById('root')
 );
+serviceWorker.unregister();

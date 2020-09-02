@@ -1,0 +1,12 @@
+.Root, .Title, .Grow {
+    flex-grow: 1;
+}
+
+.menuButton {
+    margin-right: 16px;
+}
+
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}

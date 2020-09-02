@@ -1,0 +1,27 @@
+.LogIn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Actions {
+    display: flex;
+    justify-content: center
+}
+
+.SignUpActions {
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+.Input {
+    width: 100%;
+}
+
+.Card {
+    padding: 50px;
+    width: 575px;
+    text-align: center;
+}
