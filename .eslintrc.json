@@ -5,8 +5,7 @@
     },
     "parser": "babel-eslint",
     "extends": [
-        "plugin:react/recommended",
-        "standard"
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {

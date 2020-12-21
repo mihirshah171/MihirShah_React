@@ -32,7 +32,7 @@ class Users extends React.Component {
                         <h1>Hello</h1>
                         {
                             this.state.users.map((user) =>
-                                <div>
+                                <div key={user._id}>
                                     {/* <h1 key={user.created_at}>Welcome {user.FirstName}</h1> */}
                                     <li key={user._id}>{user.Email}</li>
                                 </div>

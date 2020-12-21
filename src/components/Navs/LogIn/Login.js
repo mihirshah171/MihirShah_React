@@ -39,9 +39,9 @@ const Login = (props) => {
                             API.post("users/login", values)
                                 .then((res) => {
                                     debugger
-                                    localStorage.setItem("access_token", res.data.token)
-                                    localStorage.setItem("access_userId", res.data.data._id)
-                                    API.defaults.headers.common['Authorization'] = res.data.token;
+                                    localStorage.setItem("access_token", res.data.Data.Token)
+                                    localStorage.setItem("access_userId", res.data.Data._id)
+                                    API.defaults.headers.common['Authorization'] = res.data.Data.Token;
                                     props.history.push("/u");
                                 })
                                 .catch((err) => alert(err.response.data.msg));

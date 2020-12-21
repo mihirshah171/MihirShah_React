@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosApiInstance = axios.create({
-    baseURL: 'http://localhost:9599/'
+    baseURL: 'https://axios-crud-server.herokuapp.com/'
 });
 
 if (localStorage.getItem("access_token") !== null) {
