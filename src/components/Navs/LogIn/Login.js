@@ -38,7 +38,6 @@ const Login = (props) => {
                             setSubmitting(false);
                             API.post("users/login", values)
                                 .then((res) => {
-                                    debugger
                                     localStorage.setItem("access_token", res.data.Data.Token)
                                     localStorage.setItem("access_userId", res.data.Data._id)
                                     API.defaults.headers.common['Authorization'] = res.data.Data.Token;

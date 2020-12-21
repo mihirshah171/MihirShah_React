@@ -9,7 +9,6 @@ export class Logintbygoogle extends Component {
         };
     }
     signup(res) {
-        debugger
         const googleresponse = {
             Name: res.profileObj.name,
             Email: res.profileObj.email,
@@ -18,10 +17,8 @@ export class Logintbygoogle extends Component {
             // Image: res.profileObj.imageUrl,
             // ProviderId: 'Google'
         };
-        debugger;
         API.post('users', googleresponse)
             .then((result) => {
-                debugger
                 localStorage.setItem("access_token", JSON.stringify(res.tokenObj.id_token));
                 this.props.history.push('/u')
             });
@@ -29,7 +26,6 @@ export class Logintbygoogle extends Component {
     render() {
         const responseGoogle = (response) => {
             console.log(response);
-            debugger;
             this.signup(response);
         }
         return (

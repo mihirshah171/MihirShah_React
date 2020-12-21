@@ -13,7 +13,6 @@ class Users extends React.Component {
         let token = localStorage.getItem("access_token")
         API.get("users/:id", { headers: { "Authorization": `Bearer ${token}` } })
             .then((res) => {
-                debugger
                 this.setState({ users: res.data.Data })
                 console.log(this.state.users)
             })

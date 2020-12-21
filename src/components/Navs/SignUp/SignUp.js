@@ -67,7 +67,6 @@ const SignUp = (props) => {
                             setSubmitting(false);
                             API.post("users", values)
                                 .then((res) => {
-                                    debugger
                                     resetForm();
                                     props.history.push("/login");
                                 })

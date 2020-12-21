@@ -58,7 +58,6 @@ const Header = (props) => {
         // let token = localStorage.getItem("access_token")
         // API.post("users/logout", { headers: { "Authorization": `Bearer ${token}` } })
         //     .then((res) => {
-        debugger
         localStorage.clear("access_token");
         localStorage.clear("access_userId");
         API.defaults.headers.common['Authorization'] = "";
