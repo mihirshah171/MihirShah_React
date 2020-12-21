@@ -51,7 +51,6 @@ host-site-iis:
     - npm run build
     - Copy-Item -Path "./public/web.config" -Destination "./build"
     - Copy-Item "./build" -Destination "C:\IISWebsites\React-Gitlab-CI-CD\" -Recurse -Force
-    - New-IISSite -Name 'React-Gitlab-CI-CD' -PhysicalPath "C:\IISWebsites\React-Gitlab-CI-CD\build"
-    - BindingInformation "*:8123:" -Force
+    - New-IISSite -Name 'React-Gitlab-CI-CD' -PhysicalPath "C:\IISWebsites\React-Gitlab-CI-CD\build" BindingInformation "*:8123:" -Force
     - Get-IISSite
     - Remove-Item "./node_modules/.cache/" -Recurse
