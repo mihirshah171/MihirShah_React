@@ -156,7 +156,7 @@ const Header = (props) => {
                     </IconButton> */}
                     <NavLink to={{ pathname: props.match.url }} className={styles.Nav}>
                         <Typography className={classes.title} variant="h6" noWrap>
-                            Practice
+                            React-Material-UI-Demo
                         </Typography>
                     </NavLink>
                     <div className={styles.Grow} />
